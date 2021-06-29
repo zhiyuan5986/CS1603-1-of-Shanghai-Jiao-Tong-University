@@ -1,0 +1,19 @@
+1
+//Shape.h
+#ifndef shape_h
+#define shape_h
+#include <iostream>
+using namespace std;
+class Shape {
+protected:
+    int x,y;
+public:
+    Shape(int xx, int yy) {x = xx;y = yy;}
+    virtual double area () const =0;
+    virtual double circum() const = 0;
+    void show_position() {cout << '(' << x << ',' << y << ')';}
+};
+#endif
+
+//Shape.cpp
+
