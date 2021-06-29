@@ -1,0 +1,63 @@
+1
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, m, sum=0;
+    cin >> n;
+    for (int j=0;j<10;++j) {
+        m=n;
+        sum=0;
+        while (m!=0) {
+            n=m%10;
+            m/=10;
+            sum += n;
+        }
+        n=sum;
+    }
+    cout << sum;
+    return 0;
+}
+
+2
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, zheng=0, fu=0;
+    do {
+        cin >> n;
+        if (n<0) ++fu;
+        if (n>0) ++zheng;
+    } while (n != 0);
+    cout << zheng << ' ' << fu;
+    return 0;
+}
+
+
+3
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, m, tmp;
+    cin >> n >> m;
+    if (n<m) {
+        tmp = n;
+        n = m;
+        m = tmp;//保证n更大
+    }
+    while (n%m != 0) {
+        tmp = n;
+        n = m;
+        m = tmp%m;
+    }
+    cout << m;
+    return 0;
+}
+
+
+
